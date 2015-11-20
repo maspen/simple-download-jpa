@@ -15,6 +15,13 @@ import com.intelligrated.download.mapper.DataTypeEnum;
 import com.intelligrated.download.mapper.Mapper;
 import com.intelligrated.download.repo.DataObjectRepository;
 
+/**
+ * main entry point for boot application
+ * very simply maps String 'line' into DataObject
+ * and stores object in an in-memory H2 db
+ * 
+ * @author matt.aspen
+ */
 @SpringBootApplication
 public class SimpleDownloadApplication implements CommandLineRunner {
 	

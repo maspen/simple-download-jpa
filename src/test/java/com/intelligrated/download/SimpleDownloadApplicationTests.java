@@ -2,7 +2,7 @@ package com.intelligrated.download;
 
 import java.time.LocalDateTime;
 
-import org.hamcrest.core.Is;
+import org.h2.mvstore.cache.CacheLongKeyLIRS.Config;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,16 +12,17 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.intelligrated.download.config.Config;
+import com.intelligrated.download.entity.DataObject;
+import com.intelligrated.download.repo.DataObjectRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @Transactional
-//@SpringApplicationConfiguration(classes = SimpleDownloadApplication.class)
-@ContextConfiguration(classes = Config.class)
+@ContextConfiguration(classes = SimpleConfig.class)
 public class SimpleDownloadApplicationTests {
 
-	@Autowired
+	@Autowired(required = true)
 	DataObjectRepository repository;
+	
 	DataObject dataObject;
 	
 	@Before

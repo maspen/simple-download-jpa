@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.concurrent.ConcurrentMap;
 
-import com.intelligrated.download.DataObject;
+import com.intelligrated.download.entity.DataObject;
 
 public class Mapper {
 	public static DataObject map(String line, ConcurrentMap<String, DataMapping> mapping) {

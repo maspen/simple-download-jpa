@@ -9,9 +9,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.intelligrated.download.entity.DataObject;
 import com.intelligrated.download.mapper.DataMapping;
 import com.intelligrated.download.mapper.DataTypeEnum;
 import com.intelligrated.download.mapper.Mapper;
+import com.intelligrated.download.repo.DataObjectRepository;
 
 @SpringBootApplication
 public class SimpleDownloadApplication implements CommandLineRunner {

@@ -45,12 +45,6 @@ public class SimpleDownloadApplication implements CommandLineRunner {
         System.out.println("resulting object:");
         System.out.println(dataObject.toString());
         
-        // TODO: use Repository to insert data into H2 db
-        // http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories
-        
-        // BELOW: getting error:
-        // No qualifying bean of type [com.intelligrated.download.db.DataObjectRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-        
         DataObject persistedDataObject = dataObjectRepository.save(dataObject);
         System.out.println("data object persisted, id: " + persistedDataObject.getId());
     }

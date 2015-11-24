@@ -30,6 +30,7 @@ public class SimpleDownloadApplication implements CommandLineRunner {
 		put("sku", new DataMapping(6, 10, DataTypeEnum.STRING));
 		put("order_number", new DataMapping(0, 6, DataTypeEnum.INTEGER));
 		put("ship_date", new DataMapping(16, 23, DataTypeEnum.DATE));
+		put("desc", new DataMapping(39, 11, DataTypeEnum.STRING));
 	}};
 	
 	@Autowired
@@ -37,7 +38,7 @@ public class SimpleDownloadApplication implements CommandLineRunner {
 	
 	static String timeAsString = LocalDateTime.now().toString();
 	//					 [order number][sku][ship date]
-	static String line = "123456XYZ6789ABC" + timeAsString;
+	static String line = "123456XYZ6789ABC" + timeAsString + "DESCRIPTION";
 	// sample date: 2015-11-19T15:30:33.384
 	
     public static void main(String[] args) {

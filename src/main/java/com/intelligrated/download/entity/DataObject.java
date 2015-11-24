@@ -3,6 +3,7 @@ package com.intelligrated.download.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,8 +17,13 @@ public class DataObject implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	@Column(name="order_number")
 	private Integer orderNumber;
+	
+	@Column(name="sku")
 	private String sku;
+	
+	@Column(name="ship_date")
 	private LocalDateTime shipDate;
 	
 	public DataObject(){};
